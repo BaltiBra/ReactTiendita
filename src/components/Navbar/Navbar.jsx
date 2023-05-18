@@ -1,22 +1,27 @@
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Logo from './Icon.jsx';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
-const Navbar = () => {
+function NavbarAndIcon() {
   return (
-    <AppBar position="static" style={{ backgroundColor: '#1976d2' }}>
-      <Toolbar style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '15px' }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="https://material-ui.com/static/logo_raw.svg" alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
-          <Typography variant="h6">Menu</Typography>
-        </div>
-        <div style={{ display: 'flex', fontSize: '16px' }}>
-          <Button href="#" style={{ color: 'white', marginRight: '15px' }}>Inicio</Button>
-          <Button href="#" style={{ color: 'white', marginRight: '15px' }}>Contacto</Button>
-          <Button href="#" style={{ color: 'white' }}>Tienda</Button>
-        </div>
-      </Toolbar>
-    </AppBar>
+    <Navbar bg="primary" variant="dark">
+        <Container>
+          <Logo/>
+          <Navbar.Brand href="#home" style={{padding: '9px',}}>Inicio</Navbar.Brand>
+          
+          <Nav className="me-auto dropdown">
+          <DropdownButton id="dropdown-basic-button" title="Shop">
+            <Dropdown.Item href="#/action-1">Cositas</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Libros</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Desabilitado</Dropdown.Item>
+          </DropdownButton>
+          </Nav>
+        </Container>
+      </Navbar>
   );
 }
 
-export default Navbar;
+export default NavbarAndIcon;
