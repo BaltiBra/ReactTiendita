@@ -1,4 +1,4 @@
-import Navbar from "./Navbar/Navbar";
+import Navbar from "./Navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Main  ()  {
@@ -8,5 +8,4 @@ function Main  ()  {
             </div>
         )                    
 }
-
 export default Main;

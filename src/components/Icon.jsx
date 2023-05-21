@@ -1,4 +1,4 @@
-import icon from './icon.png'
+import icon from '../images/icon.png'
 
 function Logo  () {
         return (
@@ -9,6 +9,7 @@ function Logo  () {
 				height: '80px',
                 position: 'left 20px'               
            }}
+           alt='icono_tienda'
             />
         )
 }
