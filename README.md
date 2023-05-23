@@ -1,3 +1,12 @@
+PRIMERA APLICACION WEB DE REACT :)
+Landing del emprendimiento JettlagCommics, se hace lo que se puede.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
