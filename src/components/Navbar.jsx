@@ -6,23 +6,35 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import CartWidget from './CartWidget.jsx';
 
-function NavbarAndIcon() {
+const NavbarAndIcon = () => {
+  const navbarStyle = {
+    //  display: 'flex',
+     justifyContent: 'center',
+     alignItems: 'center',
+     marginTop: '10px',
+     borderRadius: '10px',
+     padding: '10px',
+  };
+
   return (
-    <Navbar bg="primary" variant="dark">
-        <Container style={{width: '80%', margin:'15px'}}>
+    <div style={navbarStyle}>
+      {<Navbar bg="primary" variant="dark" >
+        <Container >
           <Logo/>
           <Navbar.Brand href="#home" style={{paddingLeft: '20px',}}>Inicio</Navbar.Brand>
           <Nav className="me-auto dropdown">
-          <DropdownButton id="dropdown-basic-button" title="Shop">
-            <Dropdown.Item href="#/action-1">Cositas</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Libros</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Desabilitado</Dropdown.Item>
-          </DropdownButton>
+            <DropdownButton id="dropdown-basic-button" title="Shop">
+             <Dropdown.Item href="#/action-1">Cositas</Dropdown.Item>
+             <Dropdown.Item href="#/action-2">Libros</Dropdown.Item>
+             <Dropdown.Item href="#/action-3">Desabilitado</Dropdown.Item>
+           </DropdownButton>
           </Nav>
           <CartWidget/>
         </Container>
-      </Navbar>
+    </Navbar>}
+    </div>
   );
-}
-
+};
 export default NavbarAndIcon;
+
+

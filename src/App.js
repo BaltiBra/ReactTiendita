@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div>
+    <div style={{ backgroundImage: 'url("./images/fondo.jpg")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', minHeight: '100vh' }}>
     <NavBar />
     <ItemListContainer nombre={'Baltasar'} />
   </div>
