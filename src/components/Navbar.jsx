@@ -14,11 +14,12 @@ const NavbarAndIcon = () => {
      marginTop: '10px',
      borderRadius: '10px',
      padding: '10px',
+     width: '70%'
   };
 
   return (
-    <div style={navbarStyle}>
-      {<Navbar bg="primary" variant="dark" >
+    <div style={{display: 'flex', justifyContent: 'center' }}>
+      {<Navbar bg="primary" variant="dark" style={navbarStyle} >
         <Container >
           <Logo/>
           <Navbar.Brand href="#home" style={{paddingLeft: '20px',}}>Inicio</Navbar.Brand>
