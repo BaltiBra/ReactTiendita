@@ -5,7 +5,7 @@ function ItemListContainer() {
   const { id } = useParams();
 
   useEffect(() => {
-    // Lógica para cargar productos según el parámetro "id"
+    
   }, [id]);
 
   return (
