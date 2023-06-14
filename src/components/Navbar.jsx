@@ -5,6 +5,7 @@ import Logo from './Icon.jsx';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import CartWidget from './CartWidget.jsx';
+import { Link } from 'react-router-dom';
 
 const NavbarAndIcon = () => {
   const navbarStyle = {
@@ -14,7 +15,7 @@ const NavbarAndIcon = () => {
      marginTop: '10px',
      borderRadius: '10px',
      padding: '10px',
-     width: '70%'
+     width: '70%',
   };
 
   return (
@@ -22,11 +23,11 @@ const NavbarAndIcon = () => {
       {<Navbar bg="primary" variant="dark" style={navbarStyle} >
         <Container >
           <Logo/>
-          <Navbar.Brand href="#home" style={{paddingLeft: '20px',}}>Inicio</Navbar.Brand>
+          <Link to='/'><Navbar.Brand href="#home" style={{paddingLeft: '20px',}}>Inicio</Navbar.Brand></Link>
           <Nav className="me-auto dropdown">
             <DropdownButton id="dropdown-basic-button" title="Shop">
-             <Dropdown.Item href="#/action-1">Cositas</Dropdown.Item>
-             <Dropdown.Item href="#/action-2">Libros</Dropdown.Item>
+             <Link to='/Cositas'><Dropdown.Item href="#/action-1">Cositas</Dropdown.Item></Link>
+             <Link to='/Libros'><Dropdown.Item href="#/action-2">Libros</Dropdown.Item></Link>
              <Dropdown.Item href="#/action-3">Desabilitado</Dropdown.Item>
            </DropdownButton>
           </Nav>
