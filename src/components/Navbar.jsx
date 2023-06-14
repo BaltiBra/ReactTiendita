@@ -22,7 +22,7 @@ const NavbarAndIcon = () => {
     <div style={{display: 'flex', justifyContent: 'center' }}>
       {<Navbar bg="primary" variant="dark" style={navbarStyle} >
         <Container >
-          <Logo/>
+          <Link to='/'><Logo/></Link>
           <Link to='/'><Navbar.Brand href="#home" style={{paddingLeft: '20px',}}>Inicio</Navbar.Brand></Link>
           <Nav className="me-auto dropdown">
             <DropdownButton id="dropdown-basic-button" title="Shop">
