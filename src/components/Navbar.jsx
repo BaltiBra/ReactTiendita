@@ -20,7 +20,7 @@ const NavbarAndIcon = () => {
 
   return (
     <div style={{display: 'flex', justifyContent: 'center' }}>
-      {<Navbar bg="primary" variant="dark" style={navbarStyle} >
+      <Navbar bg="primary" variant="dark" style={navbarStyle} >
         <Container >
           <Link to='/'><Logo/></Link>
           <Link to='/'><Navbar.Brand href="#home" style={{paddingLeft: '20px',}}>Inicio</Navbar.Brand></Link>
@@ -33,7 +33,7 @@ const NavbarAndIcon = () => {
           </Nav>
           <CartWidget/>
         </Container>
-    </Navbar>}
+    </Navbar>
     </div>
   );
 };
