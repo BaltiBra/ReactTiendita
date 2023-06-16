@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 function Libros() {
     return(
         <div>
-            <Navbar/>
+           
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, facere unde! Quisquam accusamus ad saepe. At est dolor nostrum, nam molestiae iusto maiores eum nihil, eius, magni obcaecati eaque nemo?</p>
         
         

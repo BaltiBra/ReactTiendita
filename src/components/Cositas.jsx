@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 function Cositas() {
     return(
-        <div><Navbar/></div>
+        <div></div>
     )
     
 }
