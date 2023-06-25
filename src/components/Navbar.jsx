@@ -5,9 +5,12 @@ import Logo from './Icon.jsx';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import CartWidget from './CartWidget.jsx';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const NavbarAndIcon = () => {
+
+const NavbarAndIcon = ({onSearch}) => {
   const navbarStyle = {
     //  display: 'flex',
      justifyContent: 'center',
@@ -16,6 +19,18 @@ const NavbarAndIcon = () => {
      borderRadius: '10px',
      padding: '10px',
      width: '70%',
+  };
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate(`/search/${searchTerm}`);
   };
 
   return (
@@ -30,6 +45,12 @@ const NavbarAndIcon = () => {
              <Link to='/Libros'><Dropdown.Item href="#/action-2">Libros</Dropdown.Item></Link>
              <Dropdown.Item href="#/action-3">Desabilitado</Dropdown.Item>
            </DropdownButton>
+           <nav>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={searchTerm} onChange={handleChange} />
+        <button type="submit">Buscar</button>
+      </form>
+    </nav>
           </Nav>
           <CartWidget/>
         </Container>
