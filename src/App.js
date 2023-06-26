@@ -13,6 +13,8 @@ import Main from './components/Main';
 import Carrito from './components/Carrito';
 import Error404 from './components/Error404';
 import SearchResultContainer from './components/SearchResultContainer';
+import ItemCount from './components/ItemCount';
+import Carrousel from './components/Carrousel';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -34,9 +36,10 @@ function App() {
             <Route path='/*' element={<Error404></Error404>}/>
             <Route path="/search/:term" Component={SearchResultContainer} />
           </Routes>
-          <Carrito></Carrito>
-      <ItemListContainer nombre={'Baltasar'} searchTerm={searchTerm} />
-          <ItemDetailContainer/>
+          <ItemCount></ItemCount>
+          {/* <Carrito></Carrito> */}
+      {/* <ItemListContainer nombre={'Baltasar'} searchTerm={searchTerm} />
+          <ItemDetailContainer/> */}
   </Router>
  </div> );
 }
