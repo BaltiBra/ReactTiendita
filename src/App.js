@@ -15,6 +15,7 @@ import Error404 from './components/Error404';
 import SearchResultContainer from './components/SearchResultContainer';
 import ItemCount from './components/ItemCount';
 import Carrousel from './components/Carrousel';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,9 +26,11 @@ function App() {
 
   return (< div style={{ backgroundImage: `url(${fondo})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', minHeight: '100vh',  overflow: 'hidden'}}>
         
-        <Router>
-          <div >
-            < NavBar onSearch={handleSearch}/>
+        
+          
+         <Router>  
+            <div >
+              < NavBar onSearch={handleSearch}/>
             </div>
           <Routes>
             <Route path='/' index element={<Main/>}/>
@@ -36,11 +39,14 @@ function App() {
             <Route path='/*' element={<Error404></Error404>}/>
             <Route path="/search/:term" Component={SearchResultContainer} />
           </Routes>
+         
+        </Router>
+          
           <ItemCount></ItemCount>
           {/* <Carrito></Carrito> */}
       {/* <ItemListContainer nombre={'Baltasar'} searchTerm={searchTerm} />
           <ItemDetailContainer/> */}
-  </Router>
+  <Footer />
  </div> );
 }
 
